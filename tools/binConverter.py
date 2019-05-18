@@ -29,17 +29,17 @@ def openFileToByte_generator(filename , chunkSize = 128):
 
 
 if(len(sys.argv) is not 2):
-	sys.exit('usage: binConverter.py "pathToFile\\fileName.bin"')
+	sys.exit('Usage: binConverter.py "payload.bin"')
 
 fileIn = sys.argv[1]
 
 
 base = os.path.splitext(fileIn)[0]
-fileOut =  base + ".h"
+fileOut =  "./main/payload.h"
 
 stringBuffer = "\t"
 countBytes = 0
-print("reading file: " + fileIn)
+print("Reading file: " + fileIn)
 
 for byte in openFileToByte_generator(fileIn,16):
     countBytes += 1
@@ -49,11 +49,11 @@ for byte in openFileToByte_generator(fileIn,16):
 
 
 
-stringBuffer = "#include <Arduino.h> \n \n#define FUSEE_BIN_SIZE " + str(countBytes) + "\nconst PROGMEM byte fuseeBin[FUSEE_BIN_SIZE] = {\n" + stringBuffer + "\n};"
+stringBuffer = "#include <Arduino.h> \n//" + os.path.basename(fileIn) + "\n#define FUSEE_BIN_SIZE " + str(countBytes) + "\nconst PROGMEM byte fuseeBin[FUSEE_BIN_SIZE] = {\n" + stringBuffer + "\n};"
 
-print("\nwriting file: " + fileOut)
+print("\nWriting file: " + fileOut)
 text_file = open(fileOut, "w")
 text_file.write(stringBuffer)
 text_file.close()
 
-print("finished")
+print("Finished")
