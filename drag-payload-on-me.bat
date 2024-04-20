@@ -17,6 +17,7 @@ mkdir build
  -hardware %arduinoroot%\portable\packages^
  -tools %arduinoroot%\tools-builder^
  -tools %arduinoroot%\portable\packages^
+ -built-in-libraries %arduinoroot%\libraries^
  -libraries %arduinoroot%\portable\sketchbook\libraries^
  -fqbn=adafruit:samd:adafruit_trinket_m0^
  -build-path .\build^
@@ -24,5 +25,7 @@ mkdir build
 
 @ECHO ===== Converting binary into uf2 format...
 "%python3root%" .\tools\uf2conv.py -o sam-fusee-launcher.uf2 -c .\build\main.ino.bin
+
+@ECHO ===== Ready-to-flash file is available at sam-fusee-launcher.uf2
 
 pause

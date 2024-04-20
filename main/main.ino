@@ -221,7 +221,7 @@ void setup() {
       blink = !blink;
       lastCheckTime = currentTime;
     }
-    if (currentTime > 5000) sleep(-1);
+    // if (currentTime > 5000) sleep(-1);
   }
 
   DEBUG_PRINTLN("Found Tegra!");
