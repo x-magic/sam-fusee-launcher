@@ -1,5 +1,3 @@
-
-
 # sam-fusee-launcher
 Fusee Launcher for the Adafruit Trinket M0 board. Based on [sam fusee launcher](https://github.com/atlas44/sam-fusee-launcher) and [sam fusee launcher](https://github.com/noemu/sam-fusee-launcher).
 
@@ -11,7 +9,7 @@ Go through [trinket m0: arduino-ide-setup](https://learn.adafruit.com/adafruit-t
 The original fusee gelee demo payload is added to test your setup.
 
 Summary:
-* Download and install [Arduino IDE](http://www.arduino.cc/en/Main/Software)
+* Download and install [Arduino IDE](http://www.arduino.cc/en/Main/Software); If you're using Linux/macOS, also install `arduino-cli`
 * In Arduino IDE: go to "Prefences" and add following URL to "Additional Board Manager URLs": `https://adafruit.github.io/arduino-board-index/package_adafruit_index.json`
 * go to "Tools > Board > Board Manager" and select Type: All and
 * Install "Adafruit SAMD Boards" and "Arduino - Boards SAMD"
@@ -50,5 +48,4 @@ _You must install required libraries before running the automation batch script.
 * [noemu](https://github.com/noemu/sam-fusee-launcher)
 * [Microsoft UF2](https://github.com/microsoft/uf2/blob/master/utils/uf2conv.py)
 * [ktemkin](https://github.com/Cease-and-DeSwitch/fusee-launcher)
-
 

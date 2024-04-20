@@ -1,2 +1,4 @@
-main/payload.h
-*.bin
+/main/build
+/main/payload.h
+/sam-fusee-launcher.uf2
+/*.bin
